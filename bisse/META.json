@@ -1,0 +1,23 @@
+{
+  "name": "BisseSmc",
+  "version": "0.0.0",
+  "description": "BiSSE SMC",
+  "manifest": {
+    "source": [
+      "bi/BiSSE.bi",
+      "bi/BiSSENode.bi",
+      "bi/BiSSETree.bi",
+      "bi/PhyModel.bi",
+      "bi/run_apf.bi",
+      "bi/run_bpf.bi"
+    ],
+    "data": [
+    
+    ],
+    "other": [
+      "LICENSE",
+      "META.json",
+      "README.md"
+    ]
+  }
+}

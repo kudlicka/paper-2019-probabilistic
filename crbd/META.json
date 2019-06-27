@@ -1,0 +1,23 @@
+{
+  "name": "CrbdSmc",
+  "version": "0.0.0",
+  "description": "CRBD SMC",
+  "manifest": {
+    "source": [
+      "bi/CRBDModel.bi",
+      "bi/PhyModel.bi",
+      "bi/PhyNode.bi",
+      "bi/PhyTree.bi",
+      "bi/run_apf.bi",
+      "bi/run_bpf.bi"
+    ],
+    "data": [
+    
+    ],
+    "other": [
+      "LICENSE",
+      "META.json",
+      "README.md"
+    ]
+  }
+}
