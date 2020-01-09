@@ -24,11 +24,7 @@ class CRBDModel < PhyModel {
     while node? {
       pauseYields();
 
-      if node!.isRoot() && node!.noStalk() {
-        if node!.hasChildren() {
-          yield log(2);
-        }
-      } else {
+      if !node!.isRoot() || !node!.noStalk() {
         count_hs:Random<Integer>;
         count_hs ~ Poisson(λ * node!.branch_length);
         for i:Integer in 1..Integer(count_hs) {
@@ -44,7 +40,6 @@ class CRBDModel < PhyModel {
 
         if node!.hasChildren() {
           0.0 ~> Exponential(λ);
-          yield log(2);
         }
 
         0 ~> Poisson(μ * node!.branch_length);

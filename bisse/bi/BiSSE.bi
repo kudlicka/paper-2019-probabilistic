@@ -42,11 +42,7 @@ class BiSSE < PhyModel {
         state <- node!.getParent()!.state_end!;
       }
 
-      if node!.isRoot() && node!.noStalk() {
-        if node!.hasChildren() {
-          yield log(2);
-        }
-      } else {
+      if !node!.isRoot() || !node!.noStalk() {
         count_sc:Random<Integer>;  // #state changes
         count_sc ~ Poisson(σ * node!.branch_length);
 
@@ -99,7 +95,6 @@ class BiSSE < PhyModel {
 
         if node!.hasChildren() {
           0.0 ~> Exponential(λ[1+state]);
-          yield log(2);
         }
       }
 
